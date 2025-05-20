@@ -12,7 +12,6 @@ const Header = () => {
     <header className="w-full">      
       <div className="bg-black bg-opacity-70 text-white py-4 relative">
         <div className="container mx-auto flex items-center px-4">
-          {/* Logo - with less space */}
           <div className="w-1/5 mr-4">
             <Link href="/" className="flex items-center">
               <h1 className="text-3xl font-bold text-white">
@@ -21,9 +20,7 @@ const Header = () => {
             </Link>
           </div>
           
-          {/* Navigation Links */}
           <nav className="hidden md:flex items-center space-x-6">
-            {/* Explore Dropdown */}
             <div className="relative">
               <button 
                 onClick={() => setIsExploreOpen(!isExploreOpen)}
