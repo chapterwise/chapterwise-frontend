@@ -29,7 +29,7 @@ export default function MissionPage() {
       <section className="relative h-screen bg-[url('/bookshelf-bg.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         <div className="relative z-10 container mx-auto px-6 h-full flex flex-col justify-center">
-          <h1 className="text-6xl font-bold mb-8">OUR M<span className="invisible">I</span>SSION</h1>
+          <h1 className="text-6xl font-bold mb-8">OUR MISSION</h1>
           <p className="text-lg max-w-3xl">
             FROM CLASSICS TO THRILLERS, EVERY LIBRO DESERVES A READER BECAUSE GREAT STORIES SHOULD BE SHARED NOT SHELVED!
           </p>
@@ -116,44 +116,49 @@ export default function MissionPage() {
         </div>
       </section>
 
-      {/* Why chapterWISE */}
+      {/* Why chapterWISE - WITH STICKY LEFT DIV */}
       <section className="py-12 px-6 bg-gray-900">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8">why chapterWISE?</h2>
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-4">TIRED OF SCREENS FIGHTING FOR YOUR ATTENTION?</h3>
-          </div>
           
-          <div className="space-y-6">
-            <div className="flex items-start">
-              <span className="bg-white text-black font-bold text-xl w-8 h-8 flex items-center justify-center rounded-full mr-4 flex-shrink-0">1</span>
-              <div>
-                <h4 className="text-xl font-bold mb-2">BUT LET'S BE HONEST</h4>
-                <p className="text-gray-300">We all remember those days when we had to force ourselves to read, but times have changed.</p>
-              </div>
+          <div className="flex flex-col md:flex-row">
+            {/* Left sticky div */}
+            <div className="md:sticky md:top-24 md:self-start md:w-1/3 mb-8 md:mb-0 md:pr-8">
+              <h3 className="text-2xl font-bold">TIRED OF SCREENS FIGHTING FOR YOUR ATTENTION?</h3>
             </div>
             
-            <div className="flex items-start">
-              <span className="bg-white text-black font-bold text-xl w-8 h-8 flex items-center justify-center rounded-full mr-4 flex-shrink-0">2</span>
-              <div>
-                <h4 className="text-xl font-bold mb-2">ENTER YOUR READING AMIGO.</h4>
-                <p className="text-gray-300">chapterWISE is here to help you find books that match your interests.</p>
+            {/* Right scrolling div */}
+            <div className="md:w-2/3 space-y-12">
+              <div className="flex items-start">
+                <span className="bg-white text-black font-bold text-xl w-8 h-8 flex items-center justify-center rounded-full mr-4 flex-shrink-0">1</span>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">BUT LET'S BE HONEST</h4>
+                  <p className="text-gray-300">We all remember those days when we had to force ourselves to read, but times have changed.</p>
+                </div>
               </div>
-            </div>
-            
-            <div className="flex items-start">
-              <span className="bg-white text-black font-bold text-xl w-8 h-8 flex items-center justify-center rounded-full mr-4 flex-shrink-0">3</span>
-              <div>
-                <h4 className="text-xl font-bold mb-2">ON A BUDGET? NO PROBLEM.</h4>
-                <p className="text-gray-300">Our membership plans cater to all budget ranges.</p>
+              
+              <div className="flex items-start">
+                <span className="bg-white text-black font-bold text-xl w-8 h-8 flex items-center justify-center rounded-full mr-4 flex-shrink-0">2</span>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">ENTER YOUR READING AMIGO.</h4>
+                  <p className="text-gray-300">chapterWISE is here to help you find books that match your interests.</p>
+                </div>
               </div>
-            </div>
-            
-            <div className="flex items-start">
-              <span className="bg-white text-black font-bold text-xl w-8 h-8 flex items-center justify-center rounded-full mr-4 flex-shrink-0">4</span>
-              <div>
-                <h4 className="text-xl font-bold mb-2">TRY SOMETHING NEW.</h4>
-                <p className="text-gray-300">Discover books outside your comfort zone with our recommendations.</p>
+              
+              <div className="flex items-start">
+                <span className="bg-white text-black font-bold text-xl w-8 h-8 flex items-center justify-center rounded-full mr-4 flex-shrink-0">3</span>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">ON A BUDGET? NO PROBLEM.</h4>
+                  <p className="text-gray-300">Our membership plans cater to all budget ranges.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <span className="bg-white text-black font-bold text-xl w-8 h-8 flex items-center justify-center rounded-full mr-4 flex-shrink-0">4</span>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">TRY SOMETHING NEW.</h4>
+                  <p className="text-gray-300">Discover books outside your comfort zone with our recommendations.</p>
+                </div>
               </div>
             </div>
           </div>
