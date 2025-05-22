@@ -14,9 +14,13 @@ const Header = () => {
         <div className="container  mx-auto flex items-center px-4">
           <div className="w-1/5 mr-4">
             <Link href="/" className="flex items-center">
-              <h1 className="text-3xl font-bold text-white">
-                chapterWise
-              </h1>
+              <Image
+                src="assets/chapterwise.svg"
+                alt="Logo"
+                width={100}
+                height={50}
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
           
