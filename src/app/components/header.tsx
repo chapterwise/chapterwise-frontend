@@ -9,9 +9,9 @@ const Header = () => {
   const [isExploreOpen, setIsExploreOpen] = useState(false);
 
   return (
-    <header className="w-full">      
-      <div className="bg-black bg-opacity-70 text-white py-4 relative">
-        <div className="container mx-auto flex items-center px-4">
+    <header className="w-full bg-opacity-10 ">      
+      <div className="bg-black  text-white py-4 relative">
+        <div className="container  mx-auto flex items-center px-4">
           <div className="w-1/5 mr-4">
             <Link href="/" className="flex items-center">
               <h1 className="text-3xl font-bold text-white">

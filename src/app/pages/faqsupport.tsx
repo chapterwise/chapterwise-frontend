@@ -229,7 +229,7 @@ const HelpCenter = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-[#1A0A2E] to-black min-h-screen text-white">
+    <div className="w-full h-full bg-gradient-to-b from-[#1A0A2E] to-black text-white">
       <Head>
         <title>ChapterWise - Help Center</title>
         <meta name="description" content="ChapterWise help center and FAQ" />
