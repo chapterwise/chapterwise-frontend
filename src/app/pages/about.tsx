@@ -26,12 +26,10 @@ export default function MissionPage() {
   return (
     <div className="bg-black text-white min-h-screen">
      <section className="relative h-screen bg-[url('/bookshelf-bg.jpg')] bg-cover bg-center">
-  {/* Image overlay with mission heading */}
   <div className="absolute inset-0 bg-[url('/assets/ourmission.jpg')] bg-cover bg-center opacity-90"></div>
   
-  {/* Content container */}
+
   <div className="relative z-10 container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
-    {/* Mission text positioned below the image overlay */}
     <div className="mt-auto mb-20">
       <p className="text-white text-xl md:text-xl lg:text-2xl font-bold max-w-5xl leading-relaxed drop-shadow-lg">
         FROM CLASSICS TO THRILLERS, EVERY LIBRO DESERVES A READER BECAUSE GREAT STORIES SHOULD BE SHARED NOT SHELVED!
