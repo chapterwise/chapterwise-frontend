@@ -12,7 +12,7 @@ export default function Home() {
       </header> 
       <main className="flex flex-col items-center justify-center min-h-screen pt-16 ">
         <div className="w-full min-h-full px-4">
-          <HelpCenter/>
+        <MissionPage />
         </div>
       </main>
     </>
