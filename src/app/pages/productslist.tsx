@@ -1,53 +1,42 @@
 import React from 'react';
-import BookCard from '../components/BookCard';
+
 // Mock data for books - replace with your actual data
 const booksData = [
   {
+    id: 1,
     title: "SITA - WARRIOR OF MITHILA",
     author: "AMISH",
-    imageUrl: "/api/placeholder/200/300",
-    price: 99.00,
-    originalPrice: 199.00,
-    series: "Ram Chandra Series",
-    bookNumber: 2,
-    categories: ["Spiritual", "Fiction", "Mythology"],
-    quote: {
-      text: "The strength of a woman lies not in what she can destroy, but in what she can protect.",
-      source: "Sita - Warrior of Mithila"
-    }
+    price: "₹99.00",
+    format: "ENGLISH",
+    category: "SPIRITUAL",
+    image: "/api/placeholder/200/300"
   },
   {
+    id: 2,
     title: "AUTOBIOGRAPHY OF A YOGI",
     author: "PARAMAHANSA YOGANANDA",
-    imageUrl: "/api/placeholder/200/300",
-    price: 99.00,
-    categories: ["Spiritual", "Biography", "Philosophy"],
-    quote: {
-      text: "The season of failure is the best time for sowing the seeds of success.",
-      source: "Autobiography of a Yogi"
-    }
+    price: "₹99.00",
+    format: "ENGLISH",
+    category: "SPIRITUAL",
+    image: "/api/placeholder/200/300"
   },
   {
+    id: 3,
     title: "TALES FROM SOUTH CHINA SEA",
     author: "CHARLES LILEY",
-    imageUrl: "/api/placeholder/200/300",
-    price: 99.00,
-    categories: ["Adventure", "Travel", "Fiction"],
-    quote: {
-      text: "Every journey begins with a single step into the unknown.",
-      source: "Tales from South China Sea"
-    }
+    price: "₹99.00",
+    format: "ENGLISH",
+    category: "SPIRITUAL",
+    image: "/api/placeholder/200/300"
   },
   {
+    id: 4,
     title: "BHAGAVAD GITA - AS IT IS",
     author: "A.C. BHAKTIVEDANTA SWAMI PRABHUPADA",
-    imageUrl: "/api/placeholder/200/300",
-    price: 99.00,
-    categories: ["Spiritual", "Philosophy", "Religious"],
-    quote: {
-      text: "You have a right to perform your prescribed duty, but not to the fruits of action.",
-      source: "Bhagavad Gita"
-    }
+    price: "₹99.00",
+    format: "ENGLISH",
+    category: "SPIRITUAL",
+    image: "/api/placeholder/200/300"
   }
 ];
 
@@ -61,21 +50,43 @@ const allBooks = [
 ];
 
 interface BookCardProps {
-  title: string;
-  author: string;
-  imageUrl: string;
-  price: number;
-  originalPrice?: number;
-  series?: string;
-  bookNumber?: number;
-  categories?: string[];
-  quote?: {
-    text: string;
-    source: string;
+  book: {
+    id: number;
+    title: string;
+    author: string;
+    price: string;
+    format: string;
+    category: string;
+    image: string;
   };
 }
 
-
+// Since you mentioned you have the BookCard component, 
+// I'm creating a placeholder that you can replace with your actual component
+const BookCard: React.FC<BookCardProps> = ({ book }) => {
+  return (
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+      <div className="relative">
+        <img 
+          src={book.image} 
+          alt={book.title}
+          className="w-full h-64 object-cover"
+        />
+        <div className="absolute top-2 left-2">
+          <span className="bg-gray-100 text-xs px-2 py-1 rounded">{book.format}</span>
+        </div>
+        <div className="absolute top-2 right-2">
+          <span className="bg-gray-100 text-xs px-2 py-1 rounded">{book.category}</span>
+        </div>
+      </div>
+      <div className="p-4">
+        <h3 className="font-bold text-sm mb-1 line-clamp-2">{book.title}</h3>
+        <p className="text-xs text-gray-600 mb-2">{book.author}</p>
+        <p className="font-bold text-sm">{book.price}</p>
+      </div>
+    </div>
+  );
+};
 
 const ChapterWisePage: React.FC = () => {
   return (
@@ -95,18 +106,7 @@ const ChapterWisePage: React.FC = () => {
         {/* Books Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {allBooks.map((book, index) => (
-            <BookCard 
-              key={`${book.title}-${index}`}
-              title={book.title}
-              author={book.author}
-              imageUrl={book.imageUrl}
-              price={book.price}
-              originalPrice={book.originalPrice}
-              series={book.series}
-              bookNumber={book.bookNumber}
-              categories={book.categories}
-              quote={book.quote}
-            />
+            <BookCard key={`${book.id}-${index}`} book={book} />
           ))}
         </div>
       </main>
