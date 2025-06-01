@@ -3,6 +3,7 @@ import Header from "./components/header";
 import MissionPage from "./pages/about";
 import HelpCenter from "./pages/faqsupport";
 import BookCard from "./components/BookCard";
+import ChapterWisePage from "./pages/productslist";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       </header> 
       <main className="flex flex-col items-center justify-center min-h-screen pt-16 ">
         <div className="w-full min-h-full px-4">
-        <HelpCenter/>
+        <ChapterWisePage/>
         </div>
       </main>
     </>
